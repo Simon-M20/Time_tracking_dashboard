@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>FrontendMentor | Time tracking dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind CSS CDN -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+<body>
+    
+    <main class="flex justify-center items-center md:mt-32 mt-16 md:mx-0 mx-2">
+        <article class="md:grid md:grid-cols-4 md:place-content-stretch md:gap-x-5 md:gap-y-0 flex flex-col">
+
+            <section class="md:row-span-2 rounded-2xl w-54 md:h-4/5 card-bg md:mb-0 mb-8">
+                <figure class="profile pl-6 md:pt-8 md:pb-14 pb-6 pt-6 rounded-2xl md:flex-col flex-row flex justify-start items-center">
+                    <div class="md:w-full w-1/4">
+                        <img class="md:w-1/3 w-4/5 rounded-full border-2 border-white" src="images/image-jeremy.png" alt="Jeremy">
+                    </div>
+                    <figcaption class="md:mt-8 w-full">
+                        <p class="md:text-sm text-xs md:pb-2 report">Report for</p>
+                        <h1 class="md:text-4xl text-xl text-white">Jeremy <br class="md:block hidden"> Robson</h1>
+                    </figcaption>
+                </figure>
+                <article class="rounded-2xl card-bg px-6 py-5 md:flex-col flex flex-row justify-between">
+                    <p id="daily" class="py-1.5"><a class="hover:text-white focus:text-white" href="#">Daily</a></p>
+                    <p id="weekly" class="py-1.5"><a class="hover:text-white focus:text-white active:text-white" href="#">Weekly</a></p>
+                    <p id="monthly" class="py-1.5"><a class="hover:text-white focus:text-white" href="#">Monthly</a></p>
+                </article>
+            </section>
+    
+            <section class="md:mb-0 mb-4">
+                <figure>
+                    <div class="rounded-t-2xl flex justify-end items-center work">
+                        <img class="md:w-1/4 w-1/5 md:pr-0 pr-5" src="images/icon-work.svg" alt="icon-work">
+                    </div>
+                    <figcaption class="card-bg p-6 rounded-2xl relative -top-4">
+                        <div class="flex justify-between items-center">
+                            <p id="work" class="text-lg text-white">Work</p>
+                            <span>
+                                <img class="cursor-pointer" src="images/icon-ellipsis.svg" alt="icon-ellipsis">
+                            </span>
+                        </div>
+                        <div class="md:flex-col flex flex-row md:justify-start md:items-start justify-between items-center">
+                            <h2 id="current-work-time" class="my-4 md:text-4xl text-3xl text-white"></h2>
+                            <p id="previous-work-time" class="text-sm"></p>
+                        </div>
+                    </figcaption>
+                </figure>
+            </section>
+    
+            <section class="md:mb-0 mb-4">
+                <figure>
+                    <div class="flex justify-end items-center play rounded-t-2xl">
+                        <img class="md:w-1/4 w-1/5 md:pr-0 pr-5" src="images/icon-play.svg" alt="icon-play">
+                    </div>
+                    <figcaption class="card-bg p-6 rounded-2xl relative -top-4">
+                        <div class="flex justify-between items-center">
+                            <p class="text-lg text-white">Play</p>
+                            <span>
+                                <img class="cursor-pointer" src="images/icon-ellipsis.svg" alt="icon-ellipsis">
+                            </span>
+                        </div>
+                        <div class="md:flex-col flex flex-row md:justify-start md:items-start justify-between items-center">
+                            <h2 id="current-play-time" class="md:text-4xl text-3xl my-4 text-white"></h2>
+                            <p id="previous-play-time" class="text-sm"></p>
+                        </div>
+                    </figcaption>
+                </figure>
+            </section>
+    
+            <section class="md:mb-0 mb-4">
+                <figure>
+                    <div class="flex justify-end items-center study rounded-t-2xl">
+                        <img class="md:w-1/4 w-1/5 md:pr-0 pr-5" src="images/icon-study.svg" alt="icon-study">
+                    </div>
+                    <figcaption class="card-bg p-6 relative -top-4 rounded-2xl">
+                        <div class="flex justify-between items-center">
+                            <p class="text-lg text-white">Study</p>
+                            <span>
+                                <img class="cursor-pointer" src="images/icon-ellipsis.svg" alt="icon-ellipsis">
+                            </span>
+                        </div>
+                        <div class="md:flex-col flex flex-row md:justify-start md:items-start justify-between items-center">
+                            <h2 id="current-study-time" class="my-4 md:text-4xl text-3xl text-white"></h2>
+                            <p id="previous-study-time" class="text-sm"></p>
+                        </div>
+                    </figcaption>
+                </figure>
+            </section>
+
+            <section class="md:mb-0 mb-4">
+                <figure>
+                    <div class="flex justify-end items-center exercise rounded-t-2xl">
+                        <img class="md:w-1/3 w-1/4 md:pr-0 pr-5 pb-2" src="images/icon-exercise.svg" alt="icon-exercise">
+                    </div>
+                    <figcaption class="card-bg p-6 rounded-2xl relative -top-4">
+                        <div class="flex justify-between items-center">
+                            <p class="text-lg text-white">Exercise</p>
+                            <span>
+                                <img class="cursor-pointer" src="images/icon-ellipsis.svg" alt="icon-ellipsis">
+                            </span>
+                        </div>
+                        <div class="md:flex-col flex flex-row md:justify-start md:items-start justify-between items-center">
+                            <h2 id="current-exercise-time" class="my-4 md:text-4xl text-3xl text-white"></h2>
+                            <p id="previous-exercise-time" class="text-sm"></p>
+                        </div>
+                    </figcaption>
+                </figure>
+            </section>
+
+            <section class="mb-0">
+                <figure>
+                    <div class="flex justify-end items-center social rounded-t-2xl">
+                        <img class="md:w-1/4 w-1/5 pr-5 md:pr-0" src="images/icon-social.svg" alt="icon-social">
+                    </div>
+                    <figcaption class="card-bg rounded-2xl p-6 relative -top-9">
+                        <div class="flex justify-between items-center">
+                            <p class="text-lg text-white">Social</p>
+                            <span>
+                                <img class="cursor-pointer" src="images/icon-ellipsis.svg" alt="icon-ellipsis">
+                            </span>
+                        </div>
+                        <div class="md:flex-col flex flex-row md:justify-start md:items-start justify-between items-center">
+                            <h2 id="current-social-time" class="md:text-4xl text-3xl my-4 text-white"></h2>
+                            <p id="previous-social-time" class="text-sm"></p>
+                        </div>
+                    </figcaption>
+                </figure>
+            </section>
+
+            <section class="md:mb-0 mb-4">
+                <figure>
+                    <div class="flex justify-end items-center self-care rounded-t-2xl">
+                        <img class="md:w-1/4 w-1/5 md:pr-0 pr-5" src="images/icon-self-care.svg" alt="icon-self-care">
+                    </div>
+                    <figcaption class="card-bg p-6 relative -top-4 rounded-2xl">
+                        <div class="flex justify-between items-center">
+                            <p class="text-lg text-white">Self Care</p>
+                            <span>
+                                <img class="cursor-pointer" src="images/icon-ellipsis.svg" alt="icon-ellipsis">
+                            </span>
+                        </div>
+                        <div class="md:flex-col flex flex-row md:justify-start md:items-start justify-between items-center">
+                            <h2 id="current-selfcare-time" class="md:text-4xl text-3xl my-4 text-white"></h2>
+                            <p id="previous-selfcare-time" class="text-sm"></p>
+                        </div>
+                    </figcaption>
+                </figure>
+            </section>
+        </article>
+    </main>     
+
+    <script src="Js/main.js"></script>
+</body>
+</html>
